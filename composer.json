@@ -1,0 +1,99 @@
+{
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-payfast/"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-redsys/"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-firstdata/"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-billplz"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-2checkout"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-cardsave"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-gocardless"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-netbanx"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-targetpay"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-plugnpay"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-payu-latam"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-payflow-extended"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-epay"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-bluepay"
+		}
+	],
+	"require": {
+		"league/omnipay": "^3",
+		"omnipay/authorizenet": "^3.0",
+		"omnipay/buckaroo": "dev-master",
+		"omnipay/cardsave": "dev-master",
+		"omnipay/eway": "^3.0",
+		"omnipay/firstdata": "dev-master",
+		"omnipay/gocardless": "dev-master",
+		"omnipay/migs": "dev-master",
+		"omnipay/mollie": "^5.0",
+		"omnipay/multisafepay": "^3.0",
+		"omnipay/netaxept": "dev-master",
+		"omnipay/netbanx": "dev-master",
+		"omnipay/payfast": "dev-master",
+		"omnipay/payflow": "^3.0",
+		"omnipay/paymentexpress": "^3.0",
+		"omnipay/paypal": "^3.0",
+		"omnipay/pin": "dev-master",
+		"omnipay/sagepay": "^3.0",
+		"omnipay/securepay": "^3.0",
+		"omnipay/stripe": "^3.0",
+		"omnipay/targetpay": "dev-master",
+		"omnipay/worldpay": "^3.0",
+		"caswell-wc/omnipay-plugnpay": "dev-master",
+		"collizo4sky/omnipay-2checkout": "dev-master",
+		"dioscouri/omnipay-cybersource": "dev-master",
+		"hiqdev/omnipay-robokassa": "^3.2",
+		"mono/omnipay-payu-latam": "dev-master",
+		"swisnl/omnipay-redsys": "dev-master",
+		"th3third/omnipay-payflow-extended": "dev-master",
+		"xown/omnipay-epay": "dev-master",
+		"yinsee/omnipay-billplz": "dev-master",
+		"zburke/omnipay-bluepay": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Ossolution\\Payment\\": "vendor/joomdonation/payment/src/"
+		}
+	}
+}
