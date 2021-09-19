@@ -6,5 +6,6 @@
 .idea
 .vscode
 .gitignore
+/build
 /LICENSE.txt
 /README.txt
