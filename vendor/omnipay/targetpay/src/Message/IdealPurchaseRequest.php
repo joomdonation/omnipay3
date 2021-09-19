@@ -19,7 +19,7 @@ class IdealPurchaseRequest extends PurchaseRequest
      */
     public function getData()
     {
-        $this->validate('issuer', 'amount', 'description', 'returnUrl');
+        $this->validate('amount', 'description', 'returnUrl');
 
         return array(
             'rtlo' => $this->getSubAccountId(),
