@@ -59,6 +59,7 @@ class PurchaseRequest extends AbstractRequest
                 $data[$key] = $value;
             }
         }
+        $data['amount'] = $this->getAmountInteger();
 
         if (isset($data['secret'])) {
             unset($data['secret']);
@@ -81,5 +82,35 @@ class PurchaseRequest extends AbstractRequest
     public function send()
     {
         return $this->sendData($this->getData());
+    }
+    
+    public function setOrderId($value)
+    {
+    	return $this->setParameter('orderid', $value);
+    }
+    
+    public function getOrderId($value)
+    {
+    	return $this->getParameter('orderid');
+    }
+    
+    public function setAccepturl($value)
+    {
+    	return $this->setParameter('accepturl', $value);
+    }
+    
+    public function getAccepturl($value)
+    {
+    	return $this->getParameter('accepturl');
+    }
+    
+	public function setTimeout($value)
+    {
+    	return $this->setParameter('timeout', $value);
+    }
+    
+    public function getTimeout($value)
+    {
+    	return $this->getParameter('timeout');
     }
 }
