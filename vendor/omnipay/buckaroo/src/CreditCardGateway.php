@@ -7,25 +7,49 @@ use Omnipay\Common\AbstractGateway;
 /**
  * Buckaroo Credit Card Gateway
  */
-class CreditCardGateway extends BuckarooGateway
+class CreditCardGateway extends AbstractGateway
 {
     public function getName()
     {
         return 'Buckaroo Credit Card';
     }
 
-    public function getPaymentMethod($value)
+    public function getDefaultParameters()
     {
-        return $this->setParameter('paymentMethod', $value);
+        return array(
+            'websiteKey' => '',
+            'secretKey' => '',
+            'testMode' => false,
+        );
     }
 
-    public function setPaymentMethod()
+    public function getWebsiteKey()
     {
-        return $this->getParameter('paymentMethod');
+        return $this->getParameter('websiteKey');
+    }
+
+    public function setWebsiteKey($value)
+    {
+        return $this->setParameter('websiteKey', $value);
+    }
+
+    public function getSecretKey()
+    {
+        return $this->getParameter('secretKey');
+    }
+
+    public function setSecretKey($value)
+    {
+        return $this->setParameter('secretKey', $value);
     }
 
     public function purchase(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Buckaroo\Message\CreditCardPurchaseRequest', $parameters);
+    }
+
+    public function completePurchase(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Buckaroo\Message\CompletePurchaseRequest', $parameters);
     }
 }
