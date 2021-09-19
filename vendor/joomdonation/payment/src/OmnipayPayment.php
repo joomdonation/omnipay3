@@ -8,9 +8,11 @@
 
 namespace Ossolution\Payment;
 
-use Omnipay\Omnipay;
+use Joomla\CMS\Factory;
+use Joomla\CMS\Table\Table;
+use Joomla\Registry\Registry;
 use Omnipay\Common\CreditCard;
-use JFactory;
+use Omnipay\Omnipay;
 
 /**
  * Payment class which use Omnipay payment class for processing payment
@@ -57,8 +59,8 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	/**
 	 * Instantiate the payment object
 	 *
-	 * @param JRegistry $params
-	 * @param array     $config
+	 * @param   Registry  $params
+	 * @param   array     $config
 	 */
 	public function __construct($params, $config = array())
 	{
@@ -78,7 +80,7 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	/**
 	 * Set name of the Omnipay package use for this payment method class
 	 *
-	 * @param string $value
+	 * @param   string  $value
 	 */
 	public function setOmnipayPackage($value)
 	{
@@ -109,7 +111,7 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	 *
 	 * Usually, it needs to be override by the actual payment method class
 	 *
-	 * @param \Omnipay\Common\AbstractGateway $gateway
+	 * @param   \Omnipay\Common\AbstractGateway  $gateway
 	 */
 	protected function initialise($gateway)
 	{
@@ -145,7 +147,7 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	 */
 	public function processPayment($row, $data)
 	{
-		$app      = JFactory::getApplication();
+		$app      = Factory::getApplication();
 		$gateway  = $this->getGateway();
 		$cardData = $this->getOmnipayCard($data);
 
@@ -167,8 +169,7 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 		}
 		catch (\Exception $e)
 		{
-			$session = JFactory::getSession();
-			$session->set('omnipay_payment_error_reason', $e->getMessage());
+			Factory::getSession()->set('omnipay_payment_error_reason', $e->getMessage());
 			$app->redirect($this->paymentFailureUrl);
 		}
 
@@ -195,8 +196,7 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 		else
 		{
 			//Payment failure, display error message to users
-			$session = JFactory::getSession();
-			$session->set('omnipay_payment_error_reason', $response->getMessage());
+			Factory::getSession()->set('omnipay_payment_error_reason', $response->getMessage());
 			$app->redirect($this->paymentFailureUrl);
 		}
 	}
@@ -205,8 +205,8 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	 * This method need to be implemented by the payment plugin class. It needs to set url which users will be
 	 * redirected to after a successful payment. The url is stored in paymentSuccessUrl property
 	 *
-	 * @param int   $id
-	 * @param array $data
+	 * @param   int    $id
+	 * @param   array  $data
 	 *
 	 * @return void
 	 */
@@ -216,8 +216,8 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	 * This method need to be implemented by the payment plugin class. It needs to set url which users will be
 	 * redirected to when the payment is not success for some reasons. The url is stored in paymentFailureUrl property
 	 *
-	 * @param int   $id
-	 * @param array $data
+	 * @param   int    $id
+	 * @param   array  $data
 	 *
 	 * @return void
 	 */
@@ -228,8 +228,8 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	 * this method will update status of the order to success, trigger onPaymentSuccess event and send notification emails
 	 * to administrator(s) and customer
 	 *
-	 * @param JTable $row
-	 * @param string $transactionId
+	 * @param   Table   $row
+	 * @param   string  $transactionId
 	 *
 	 * @return void
 	 */
@@ -239,8 +239,8 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	 * This method need to be implemented by the payment gateway class. It needs to init the JTable order record,
 	 * update it with transaction data and then call onPaymentSuccess method to complete the order.
 	 *
-	 * @param int    $id
-	 * @param string $transactionId
+	 * @param   int     $id
+	 * @param   string  $transactionId
 	 *
 	 * @return mixed
 	 */
@@ -253,9 +253,9 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	 * The actual method class should take this chance to set the payment return, cancel and notify URLs for the request
 	 * message object...
 	 *
-	 * @param \Omnipay\Common\Message\AbstractRequest $request
-	 * @param JTable                                  $row
-	 * @param array                                   $data
+	 * @param   \Omnipay\Common\Message\AbstractRequest  $request
+	 * @param   Table                                    $row
+	 * @param   array                                    $data
 	 */
 	protected function beforeRequestSend($request, $row, $data)
 	{
@@ -277,7 +277,7 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	 */
 	public function verifyPayment()
 	{
-		$app     = JFactory::getApplication();
+		$app     = Factory::getApplication();
 		$gateway = $this->getGateway();
 
 		try
@@ -296,8 +296,9 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 				// In case the payment package doesn't return any Transaction ID, we will just get ID of record from URL
 				if (empty($id))
 				{
-					$id = JFactory::getApplication()->input->get->getInt('id', 0);
+					$id = Factory::getApplication()->input->get->getInt('id', 0);
 				}
+
 				$transactionId = $response->getTransactionReference();
 
 				$this->onVerifyPaymentSuccess($id, $transactionId);
@@ -324,8 +325,7 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 			}
 			else
 			{
-				$session = JFactory::getSession();
-				$session->set('omnipay_payment_error_reason', $errorMessage);
+				Factory::getSession()->set('omnipay_payment_error_reason', $errorMessage);
 
 				$this->setPaymentFailureUrl($id);
 				$app->redirect($this->paymentFailureUrl);
@@ -363,7 +363,7 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 	 */
 	protected function redirectOnPaymentVerify()
 	{
-		if (JFactory::getApplication()->input->getInt('notify', 0))
+		if (Factory::getApplication()->input->getInt('notify', 0))
 		{
 			return false;
 		}
@@ -398,7 +398,7 @@ abstract class OmnipayPayment extends AbstractPayment implements PaymentInterfac
 			'exp_month'        => 'expiryMonth',
 			'exp_year'         => 'expiryYear',
 			'x_card_code'      => 'cvv',
-			'card_holder_name' => 'name'
+			'card_holder_name' => 'name',
 		);
 
 		foreach ($fieldMappings as $field => $omnipayField)

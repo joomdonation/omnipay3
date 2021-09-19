@@ -1,2 +1,10 @@
+# IDE & System Related Files #
+.buildpath
+.project
+.settings
+.DS_Store
+.idea
+.vscode
+.gitignore
 /LICENSE.txt
 /README.txt

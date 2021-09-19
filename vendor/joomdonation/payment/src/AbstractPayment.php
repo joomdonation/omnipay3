@@ -8,12 +8,13 @@
 
 namespace Ossolution\Payment;
 
+use Joomla\Registry\Registry;
+
 /**
  * Abstract Payment Class
  *
  * @since  1.0
  */
-
 abstract class AbstractPayment implements PaymentInterface
 {
 	/**
@@ -44,7 +45,7 @@ abstract class AbstractPayment implements PaymentInterface
 	/**
 	 * Payment plugin parameters
 	 *
-	 * @var JRegistry
+	 * @var Registry
 	 */
 	protected $params;
 
@@ -58,8 +59,8 @@ abstract class AbstractPayment implements PaymentInterface
 	/**
 	 * Instantiate the payment object
 	 *
-	 * @param JRegistry $params
-	 * @param array     $config
+	 * @param   Registry  $params
+	 * @param   array     $config
 	 */
 	public function __construct($params, $config = array())
 	{
@@ -143,7 +144,7 @@ abstract class AbstractPayment implements PaymentInterface
 	/**
 	 * Get payment plugin parameters
 	 *
-	 * @return JRegistry
+	 * @return Registry
 	 */
 	public function getParams()
 	{
@@ -153,8 +154,8 @@ abstract class AbstractPayment implements PaymentInterface
 	/***
 	 * Render form which will redirect users to payment gateway for processing payment
 	 *
-	 * @param string $url The payment gateway URL which users will be redirected to
-	 * @param array  $data
+	 * @param   string  $url  The payment gateway URL which users will be redirected to
+	 * @param   array   $data
 	 *
 	 * @return void
 	 *
@@ -163,8 +164,8 @@ abstract class AbstractPayment implements PaymentInterface
 	protected function renderRedirectForm($url = null, $data = array())
 	{
 	?>
-		<div class="payment-heading"><?php echo $this->redirectHeading; ?></div>
-		<form method="post" action="<?php echo $url; ?>" name="payment_form" id="payment_form">
+        <div class="payment-heading"><?php echo $this->redirectHeading; ?></div>
+        <form method="post" action="<?php echo $url; ?>" name="payment_form" id="payment_form">
 			<?php
 			foreach ($data as $key => $val)
 			{
@@ -172,21 +173,22 @@ abstract class AbstractPayment implements PaymentInterface
 				echo "\n";
 			}
 			?>
-			<script type="text/javascript">
-				function redirect() {
-					document.payment_form.submit();
-				}
-				setTimeout('redirect()', 3000);
-			</script>
-		</form>
+            <script type="text/javascript">
+                function redirect() {
+                    document.payment_form.submit();
+                }
+
+                setTimeout('redirect()', 3000);
+            </script>
+        </form>
 	<?php
 	}
 
 	/**
 	 * Helper method to log the callback data sent from payment gateway to the payment plugin for payment verification
 	 *
-	 * @param array  $data
-	 * @param string $response
+	 * @param   array   $data
+	 * @param   string  $response
 	 *
 	 * @return void
 	 *
