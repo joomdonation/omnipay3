@@ -9,17 +9,21 @@ class PurchaseRequest extends RequestBase
 {
     public function setTransactionId($value)
     {
+    	/*
         if (!preg_match('/^[0-9]{4}[0-9a-zA-Z]{0,8}$/', $value)) {
             throw new \InvalidArgumentException('Invalid transaction id');
         }
+        */
         return parent::setTransactionId($value);
     }
 
     public function setTransactionReference($value)
     {
+    	/*
         if (!preg_match('/^[0-9]{4}[0-9a-zA-Z]{0,8}$/', $value)) {
             throw new \InvalidArgumentException('Invalid transaction reference');
         }
+        */
         return parent::setTransactionReference($value);
     }
 
@@ -112,33 +116,43 @@ class PurchaseRequest extends RequestBase
     {
         return $this->getTransactionReference() ?: $this->getTransactionId();
     }
+    
+    protected function getCurrencyNumber()
+    {
+    	return $this->getParameter('currencyNumber');
+    }
+    
+    public function setCurrencyNumber($value)
+    {
+    	return $this->setParameter('currencyNumber', $value);
+    }
 
     public function getData()
     {
         $this->validate('amount', 'currency', 'transactionId', 'merchantCode', 'terminal');
-
         $parameters = [
-          'Ds_Merchant_Amount' => $this->getAmountInteger(),
-          'Ds_Merchant_Currency' => $this->getCurrencyNumeric(),
-          'Ds_Merchant_Order' => $this->getMerchantOrder(),
-          'Ds_Merchant_ProductDescription' => $this->getDescription(),
-          'Ds_Merchant_Titular' => $this->getParameter('titular'),
-          'Ds_Merchant_MerchantCode' => $this->getMerchantCode(),
-          'Ds_Merchant_MerchantURL' => $this->getNotifyUrl(),
-          'Ds_Merchant_UrlOK' => $this->getReturnUrl(),
-          'Ds_Merchant_UrlKO' => $this->getCancelUrl(),
-          'Ds_Merchant_MerchantName' => $this->getMerchantName(),
-          'Ds_Merchant_ConsumerLanguage' => $this->getParameter('consumerLanguage'),
-          'Ds_Merchant_Terminal' => $this->getTerminal(),
-          'Ds_Merchant_MerchantData' => $this->getExtraData(),
-          'Ds_Merchant_TransactionType' => $this->getTransactionType(),
-          'Ds_Merchant_AuthorisationCode' => $this->getAuthorisationCode(),
+	        'DS_MERCHANT_AMOUNT'				=> $this->getAmountInteger(),
+	        'DS_MERCHANT_ORDER'					=> $this->getMerchantOrder(),
+	        'DS_MERCHANT_MERCHANTCODE'			=> $this->getMerchantCode(),
+	        'DS_MERCHANT_CURRENCY'				=> $this->getCurrencyNumber(),
+	        'DS_MERCHANT_TRANSACTIONTYPE'		=> $this->getTransactionType(),
+	        'DS_MERCHANT_TERMINAL'				=> $this->getTerminal(),
+	        'DS_MERCHANT_MERCHANTURL'			=> $this->getNotifyUrl(),
+	        'DS_MERCHANT_URLOK'					=> $this->getReturnUrl(),
+	        'DS_MERCHANT_URLKO'					=> $this->getCancelUrl(),
+	        'Ds_Merchant_ConsumerLanguage'		=> $this->getParameter('consumerLanguage'),
+	        'Ds_Merchant_ProductDescription'	=> $this->getDescription(),
+	        'Ds_Merchant_Titular'				=> '',
+	        'Ds_Merchant_MerchantData'			=> sha1($this->getNotifyUrl()),
+	        'Ds_Merchant_MerchantName'			=> $this->getMerchantName(),
+	        'Ds_Merchant_Module'				=> 'EShop Shopping Cart',
         ];
+        
         if ($this->getPayMethods())
         {
-            $parameters['Ds_Merchant_PayMethods'] = $this->getPayMethods();
+        	$parameters['Ds_Merchant_PayMethods'] = $this->getPayMethods();
         }
-
+        
         $parameters = $this->getEncoder()->encode($parameters);
         $signature = $this->getSigner()->generateSignature($parameters, $this->getMerchantOrder());
 

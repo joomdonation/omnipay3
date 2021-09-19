@@ -33,6 +33,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
     public function getTransactionId()
     {
-        return $this->data['Ds_Order'];
+        //return $this->data['Ds_Order'];
+        return '';
     }
 }
