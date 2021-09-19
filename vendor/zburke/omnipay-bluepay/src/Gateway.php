@@ -24,6 +24,7 @@ class Gateway extends AbstractGateway
         return array(
             'accountId' => '',
             'secretKey' => '',
+            'developerMode'     => false,
         );
     }
 

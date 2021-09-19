@@ -28,6 +28,11 @@ class CompletePurchaseResponse extends AbstractResponse
     {
         return isset($this->data['rawAuthMessage']) ? $this->data['rawAuthMessage'] : null;
     }
+
+	public function getTransactionId()
+	{
+		return isset($this->data['cartId']) ? $this->data['cartId'] : null;
+	}
     
     /**
      * Optional step: Redirect the customer back to your own domain.

@@ -2,6 +2,18 @@
 	"repositories": [
 		{
 			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-worldpay/"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-migs/"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/joomdonation/omnipay-buckaroo/"
+		},
+		{
+			"type": "vcs",
 			"url": "https://github.com/joomdonation/omnipay-payfast/"
 		},
 		{
@@ -79,7 +91,7 @@
 		"omnipay/securepay": "^3.0",
 		"omnipay/stripe": "^3.0",
 		"omnipay/targetpay": "dev-master",
-		"omnipay/worldpay": "^3.0",
+		"omnipay/worldpay": "dev-master",
 		"caswell-wc/omnipay-plugnpay": "dev-master",
 		"collizo4sky/omnipay-2checkout": "dev-master",
 		"dioscouri/omnipay-cybersource": "dev-master",

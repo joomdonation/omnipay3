@@ -60,6 +60,8 @@ class PurchaseRequest extends AbstractRequest
             }
         }
 
+	    $data['amount'] = $this->getAmountInteger();
+
         if (isset($data['secret'])) {
             unset($data['secret']);
             $data['hash'] = md5(implode("", array_values($data)) . $this->getParameter('secret'));

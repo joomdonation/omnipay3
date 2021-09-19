@@ -18,4 +18,9 @@ class CompletePurchaseResponse extends AbstractResponse
     {
         return isset($this->data['txnid']) ? $this->data['txnid'] : null;
     }
+
+	public function getTransactionId()
+	{
+		return isset($this->data['orderid']) ? $this->data['orderid'] : null;
+	}
 }

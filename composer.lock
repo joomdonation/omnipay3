@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3f73fce1ddc9694ac1331130c4f41d5",
+    "content-hash": "37716706126b7cdc861b83dd1ad75dc9",
     "packages": [
         {
             "name": "caswell-wc/omnipay-plugnpay",
@@ -788,13 +788,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/omnipay-buckaroo.git",
-                "reference": "3b729eeacc8c84cf79a93dddad1f5bdf4e91a218"
+                "url": "https://github.com/joomdonation/omnipay-buckaroo.git",
+                "reference": "db423981a8e0e3d566861313801a9ec82b145407"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-buckaroo/zipball/3b729eeacc8c84cf79a93dddad1f5bdf4e91a218",
-                "reference": "3b729eeacc8c84cf79a93dddad1f5bdf4e91a218",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-buckaroo/zipball/db423981a8e0e3d566861313801a9ec82b145407",
+                "reference": "db423981a8e0e3d566861313801a9ec82b145407",
                 "shasum": ""
             },
             "require": {
@@ -815,7 +815,6 @@
                     "Omnipay\\Buckaroo\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -843,7 +842,10 @@
                 "pay",
                 "payment"
             ],
-            "time": "2019-10-21T12:32:37+00:00"
+            "support": {
+                "source": "https://github.com/joomdonation/omnipay-buckaroo/tree/master"
+            },
+            "time": "2021-09-19T10:57:46+00:00"
         },
         {
             "name": "omnipay/cardsave",
@@ -1178,13 +1180,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/omnipay-migs.git",
-                "reference": "e113393fb336239da09229331a28b41d6a5adf78"
+                "url": "https://github.com/joomdonation/omnipay-migs.git",
+                "reference": "6b519b968ffe76421c8166c1f58855695d2bdb34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-migs/zipball/e113393fb336239da09229331a28b41d6a5adf78",
-                "reference": "e113393fb336239da09229331a28b41d6a5adf78",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-migs/zipball/6b519b968ffe76421c8166c1f58855695d2bdb34",
+                "reference": "6b519b968ffe76421c8166c1f58855695d2bdb34",
                 "shasum": ""
             },
             "require": {
@@ -1206,7 +1208,6 @@
                     "Omnipay\\Migs\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1231,7 +1232,10 @@
                 "pay",
                 "payment"
             ],
-            "time": "2019-03-03T17:32:04+00:00"
+            "support": {
+                "source": "https://github.com/joomdonation/omnipay-migs/tree/master"
+            },
+            "time": "2021-09-19T11:37:13+00:00"
         },
         {
             "name": "omnipay/mollie",
@@ -1967,12 +1971,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomdonation/omnipay-targetpay.git",
-                "reference": "c44bc92f4414465b64972bc511ae1cee860cd699"
+                "reference": "bc99404ebdcea79f12c138e986de9224180fad3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomdonation/omnipay-targetpay/zipball/c44bc92f4414465b64972bc511ae1cee860cd699",
-                "reference": "c44bc92f4414465b64972bc511ae1cee860cd699",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-targetpay/zipball/bc99404ebdcea79f12c138e986de9224180fad3e",
+                "reference": "bc99404ebdcea79f12c138e986de9224180fad3e",
                 "shasum": ""
             },
             "require": {
@@ -2018,20 +2022,20 @@
             "support": {
                 "source": "https://github.com/joomdonation/omnipay-targetpay/tree/master"
             },
-            "time": "2021-09-17T09:35:05+00:00"
+            "time": "2021-09-19T11:40:23+00:00"
         },
         {
             "name": "omnipay/worldpay",
-            "version": "v3.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/omnipay-worldpay.git",
-                "reference": "812a11d64e8b68690d8c8841ff0056f9aa0f605c"
+                "url": "https://github.com/joomdonation/omnipay-worldpay.git",
+                "reference": "9acc5acb9d8647cdc1b90f0991fbbe53b055c264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-worldpay/zipball/812a11d64e8b68690d8c8841ff0056f9aa0f605c",
-                "reference": "812a11d64e8b68690d8c8841ff0056f9aa0f605c",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-worldpay/zipball/9acc5acb9d8647cdc1b90f0991fbbe53b055c264",
+                "reference": "9acc5acb9d8647cdc1b90f0991fbbe53b055c264",
                 "shasum": ""
             },
             "require": {
@@ -2052,7 +2056,6 @@
                     "Omnipay\\WorldPay\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2076,7 +2079,10 @@
                 "payment",
                 "worldpay"
             ],
-            "time": "2018-05-15T11:02:57+00:00"
+            "support": {
+                "source": "https://github.com/joomdonation/omnipay-worldpay/tree/master"
+            },
+            "time": "2021-09-19T11:47:01+00:00"
         },
         {
             "name": "php-http/discovery",
@@ -2723,12 +2729,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomdonation/omnipay-redsys.git",
-                "reference": "dbbd61f6bded3dffb2a5dd625b2e09dd6d34d46f"
+                "reference": "12b755576c656c2e3d1cc4cb2ebee9a0ab5640ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomdonation/omnipay-redsys/zipball/dbbd61f6bded3dffb2a5dd625b2e09dd6d34d46f",
-                "reference": "dbbd61f6bded3dffb2a5dd625b2e09dd6d34d46f",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-redsys/zipball/12b755576c656c2e3d1cc4cb2ebee9a0ab5640ec",
+                "reference": "12b755576c656c2e3d1cc4cb2ebee9a0ab5640ec",
                 "shasum": ""
             },
             "require": {
@@ -2770,7 +2776,7 @@
             "support": {
                 "source": "https://github.com/joomdonation/omnipay-redsys/tree/master"
             },
-            "time": "2021-09-17T16:31:11+00:00"
+            "time": "2021-09-19T11:24:30+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3120,12 +3126,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomdonation/omnipay-epay.git",
-                "reference": "5782bf73f41857000bb86a92aabe4eff140b1ee9"
+                "reference": "15027a69dfa93acc909c1c8482286bc9ec66a3b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomdonation/omnipay-epay/zipball/5782bf73f41857000bb86a92aabe4eff140b1ee9",
-                "reference": "5782bf73f41857000bb86a92aabe4eff140b1ee9",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-epay/zipball/15027a69dfa93acc909c1c8482286bc9ec66a3b8",
+                "reference": "15027a69dfa93acc909c1c8482286bc9ec66a3b8",
                 "shasum": ""
             },
             "require": {
@@ -3150,7 +3156,7 @@
             "support": {
                 "source": "https://github.com/joomdonation/omnipay-epay/tree/master"
             },
-            "time": "2021-09-17T04:54:41+00:00"
+            "time": "2021-09-19T11:31:06+00:00"
         },
         {
             "name": "yinsee/omnipay-billplz",
@@ -3209,12 +3215,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomdonation/omnipay-bluepay.git",
-                "reference": "5f9988d0b451df10f8a431bde8366daca4c7958c"
+                "reference": "e3eef7c09c5d8baf5a93dd7b4b36582ff012d592"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomdonation/omnipay-bluepay/zipball/5f9988d0b451df10f8a431bde8366daca4c7958c",
-                "reference": "5f9988d0b451df10f8a431bde8366daca4c7958c",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-bluepay/zipball/e3eef7c09c5d8baf5a93dd7b4b36582ff012d592",
+                "reference": "e3eef7c09c5d8baf5a93dd7b4b36582ff012d592",
                 "shasum": ""
             },
             "require": {
@@ -3260,7 +3266,7 @@
             "support": {
                 "source": "https://github.com/joomdonation/omnipay-bluepay/tree/master"
             },
-            "time": "2021-09-17T10:10:44+00:00"
+            "time": "2021-09-19T11:31:49+00:00"
         }
     ],
     "packages-dev": [],
@@ -3277,6 +3283,7 @@
         "omnipay/payfast": 20,
         "omnipay/pin": 20,
         "omnipay/targetpay": 20,
+        "omnipay/worldpay": 20,
         "caswell-wc/omnipay-plugnpay": 20,
         "collizo4sky/omnipay-2checkout": 20,
         "dioscouri/omnipay-cybersource": 20,

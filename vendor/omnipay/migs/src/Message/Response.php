@@ -38,4 +38,16 @@ class Response extends AbstractResponse
     {
         return isset($this->data['vpc_TxnResponseCode']) ? $this->data['vpc_TxnResponseCode'] : null;
     }
+
+	public function getTransactionId()
+	{
+		if (isset($this->data['vpc_MerchTxnRef']))
+		{
+			$filter = \JFilterInput::getInstance();
+
+			return $filter->clean($this->data['vpc_MerchTxnRef'], 'INT');
+		}
+
+		return parent::getTransactionId();
+	}
 }
