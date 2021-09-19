@@ -3,7 +3,6 @@
 namespace Omnipay\Eway\Message;
 
 use Omnipay\Common\Message\AbstractRequest;
-use SimpleXMLElement;
 
 /**
  * eWAY Direct Abstract Request
@@ -13,11 +12,17 @@ abstract class DirectAbstractRequest extends AbstractRequest
 
     public function sendData($data)
     {
-        $httpResponse = $this->httpClient->request('POST', $this->getEndpoint(), [], $data->asXML());
+		// Support TLS 1.2
+	    $config = $this->httpClient->getConfig();
+	    $curlOptions = $config->get('curl.options');
+	    $curlOptions[CURLOPT_SSLVERSION] = 6;
+	    $config->set('curl.options', $curlOptions);
+	    $this->httpClient->setConfig($config);
+		// End support TLS 1.2
+		
+        $httpResponse = $this->httpClient->post($this->getEndpoint(), null, $data->asXML())->send();
 
-        $xml = new SimpleXMLElement($httpResponse->getBody()->getContents());
-
-        return $this->response = new DirectResponse($this, $xml);
+        return $this->response = new DirectResponse($this, $httpResponse->xml());
     }
 
     public function getCustomerId()
