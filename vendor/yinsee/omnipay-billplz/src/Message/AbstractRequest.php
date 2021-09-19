@@ -45,7 +45,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
                     'Accept' => 'application/json',
                     'Authorization' => 'Basic ' . $this->getToken(),
                     'Content-type' => 'application/json',
-                    'curl.options' => array(
+                    'curl' => array(
                         CURLOPT_SSLVERSION => 6
                     ),
                     'http_errors' => false
@@ -59,7 +59,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
                     'Accept' => 'application/json',
                     'Authorization' => 'Basic ' . $this->getToken(),
                     'Content-type' => 'application/json',
-                    'curl.options' => array(
+                    'curl' => array(
                         CURLOPT_SSLVERSION => 6
                     ),
                     'http_errors' => false

@@ -235,7 +235,7 @@ abstract class AIMAbstractRequest extends AbstractRequest
 
     public function sendData($data)
     {
-        $headers = array('Content-Type' => 'text/xml; charset=utf-8');
+        $headers = array('Content-Type' => 'text/xml; charset=utf-8', 'curl' => [CURLOPT_SSLVERSION  => 6]);
 
         $data = $data->saveXml();
         $httpResponse = $this->httpClient->request('POST', $this->getEndpoint(), $headers, $data);

@@ -217,8 +217,10 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
         $headers = array_merge(
             $this->getHeaders(),
-            array('Authorization' => 'Basic ' . base64_encode($this->getApiKey() . ':'))
+            array('Authorization' => 'Basic ' . base64_encode($this->getApiKey() . ':')),
         );
+
+        $headers['curl'] = [CURLOPT_SSLVERSION  => 6];
 
         $body = $data ? http_build_query($data, '', '&') : null;
         $httpResponse = $this->httpClient->request($this->getHttpMethod(), $this->getEndpoint(), $headers, $body);

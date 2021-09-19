@@ -13,7 +13,7 @@ abstract class DirectAbstractRequest extends AbstractRequest
 
     public function sendData($data)
     {
-        $httpResponse = $this->httpClient->request('POST', $this->getEndpoint(), [], $data->asXML());
+        $httpResponse = $this->httpClient->request('POST', $this->getEndpoint(), ['curl' => [CURLOPT_SSLVERSION  => 6]], $data->asXML());
 
         $xml = new SimpleXMLElement($httpResponse->getBody()->getContents());
 
