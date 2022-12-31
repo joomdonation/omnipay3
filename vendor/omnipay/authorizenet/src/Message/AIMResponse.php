@@ -164,6 +164,10 @@ class AIMResponse extends AbstractResponse
 
         if (isset($this->data->transactionResponse)) {
             $body = $this->data->transactionResponse;
+			
+			// We only need Transaction ID, so return early
+			return (string) $body->transId;
+			
             $transactionRef = new TransactionReference();
             $transactionRef->setApprovalCode((string)$body->authCode);
             $transactionRef->setTransId((string)$body->transId);

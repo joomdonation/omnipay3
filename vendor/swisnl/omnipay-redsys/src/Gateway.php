@@ -18,16 +18,16 @@ class Gateway extends AbstractGateway
 
     public function getDefaultParameters()
     {
-		return array(
-			'currencyNumber'	=> 'redsys_moneda',
-            'terminal'			=> 'redsys_terminal',
-            'merchantName'		=> 'redsys_nombre',
-			'merchantCode'		=> 'redsys_fuc',
-            'transactionType'	=> 'redsys_trans',
-            'testMode'			=> 'redsys_mode',
-			'secretKey'			=> 'redsys_clave256',
-			'payMethods'		=> 'redsys_pagos'
-        );
+	    return array(
+		    'currencyNumber'	=> 'redsys_moneda',
+		    'terminal'			=> 'redsys_terminal',
+		    'merchantName'		=> 'redsys_nombre',
+		    'merchantCode'		=> 'redsys_fuc',
+		    'transactionType'	=> 'redsys_trans',
+		    'testMode'			=> 'redsys_mode',
+		    'secretKey'			=> 'redsys_clave256',
+		    'payMethods'		=> 'redsys_pagos'
+	    );
     }
 
     public function setMerchantName($merchantName)
@@ -67,13 +67,11 @@ class Gateway extends AbstractGateway
 
     public function purchase(array $parameters = array())
     {
-        //return $this->createRequest(PurchaseRequest::class, $parameters);
-    	return $this->createRequest('\Omnipay\RedSys\Message\PurchaseRequest', $parameters);
+        return $this->createRequest(PurchaseRequest::class, $parameters);
     }
 
     public function completePurchase(array $parameters = array())
     {
-        //return $this->createRequest(CompletePurchaseRequest::class, $parameters);
-    	return $this->createRequest('\Omnipay\RedSys\Message\CompletePurchaseRequest', $parameters);
+        return $this->createRequest(CompletePurchaseRequest::class, $parameters);
     }
 }

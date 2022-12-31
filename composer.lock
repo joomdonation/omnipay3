@@ -27,6 +27,7 @@
             "require-dev": {
                 "omnipay/tests": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -59,16 +60,16 @@
         },
         {
             "name": "clue/stream-filter",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clue/stream-filter.git",
-                "reference": "aeb7d8ea49c7963d3b581378955dbf5bc49aa320"
+                "reference": "d6169430c7731d8509da7aecd0af756a5747b78e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clue/stream-filter/zipball/aeb7d8ea49c7963d3b581378955dbf5bc49aa320",
-                "reference": "aeb7d8ea49c7963d3b581378955dbf5bc49aa320",
+                "url": "https://api.github.com/repos/clue/stream-filter/zipball/d6169430c7731d8509da7aecd0af756a5747b78e",
+                "reference": "d6169430c7731d8509da7aecd0af756a5747b78e",
                 "shasum": ""
             },
             "require": {
@@ -79,12 +80,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Clue\\StreamFilter\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "Clue\\StreamFilter\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -107,6 +108,10 @@
                 "stream_filter_append",
                 "stream_filter_register"
             ],
+            "support": {
+                "issues": "https://github.com/clue/stream-filter/issues",
+                "source": "https://github.com/clue/stream-filter/tree/v1.6.0"
+            },
             "funding": [
                 {
                     "url": "https://clue.engineering/support",
@@ -117,7 +122,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-02T12:38:20+00:00"
+            "time": "2022-02-21T13:15:14+00:00"
         },
         {
             "name": "collizo4sky/omnipay-2checkout",
@@ -140,6 +145,7 @@
                 "omnipay/tests": "^3",
                 "satooshi/php-coveralls": "^0.7.1"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -187,13 +193,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:dioscouri/omnipay-cybersource.git",
-                "reference": "1f59de5d0eee27a3e021a61b7ad8e13b4afb7ea4"
+                "url": "https://github.com/dioscouri/omnipay-cybersource.git",
+                "reference": "f57861a943ffcdcd12a13b2351cc1b9f6c1426d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dioscouri/omnipay-cybersource/zipball/1f59de5d0eee27a3e021a61b7ad8e13b4afb7ea4",
-                "reference": "1f59de5d0eee27a3e021a61b7ad8e13b4afb7ea4",
+                "url": "https://api.github.com/repos/dioscouri/omnipay-cybersource/zipball/f57861a943ffcdcd12a13b2351cc1b9f6c1426d8",
+                "reference": "f57861a943ffcdcd12a13b2351cc1b9f6c1426d8",
                 "shasum": ""
             },
             "require": {
@@ -203,6 +209,7 @@
                 "omnipay/tests": "~3.0",
                 "squizlabs/php_codesniffer": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -235,38 +242,43 @@
                 "payment",
                 "purchase"
             ],
-            "time": "2018-11-25T22:15:24+00:00"
+            "support": {
+                "issues": "https://github.com/dioscouri/omnipay-cybersource/issues",
+                "source": "https://github.com/dioscouri/omnipay-cybersource/tree/master"
+            },
+            "time": "2022-03-04T06:27:46+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.3.0",
+            "version": "7.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "7008573787b430c1c1f650e3722d9bba59967628"
+                "reference": "b50a2a1251152e43f6a37f0fa053e730a67d25ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/7008573787b430c1c1f650e3722d9bba59967628",
-                "reference": "7008573787b430c1c1f650e3722d9bba59967628",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b50a2a1251152e43f6a37f0fa053e730a67d25ba",
+                "reference": "b50a2a1251152e43f6a37f0fa053e730a67d25ba",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^1.4",
-                "guzzlehttp/psr7": "^1.7 || ^2.0",
+                "guzzlehttp/promises": "^1.5",
+                "guzzlehttp/psr7": "^1.9 || ^2.4",
                 "php": "^7.2.5 || ^8.0",
-                "psr/http-client": "^1.0"
+                "psr/http-client": "^1.0",
+                "symfony/deprecation-contracts": "^2.2 || ^3.0"
             },
             "provide": {
                 "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
+                "bamarni/composer-bin-plugin": "^1.8.1",
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "^3.0",
-                "phpunit/phpunit": "^8.5.5 || ^9.3.5",
-                "psr/log": "^1.1"
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23",
+                "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
                 "ext-curl": "Required for CURL handler support",
@@ -275,17 +287,21 @@
             },
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                },
                 "branch-alias": {
-                    "dev-master": "7.3-dev"
+                    "dev-master": "7.5-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -293,18 +309,42 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "Jeremy Lindblom",
+                    "email": "jeremeamia@gmail.com",
+                    "homepage": "https://github.com/jeremeamia"
+                },
+                {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
                     "name": "Márk Sági-Kazár",
                     "email": "mark.sagikazar@gmail.com",
-                    "homepage": "https://sagikazarmark.hu"
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
             "description": "Guzzle is a PHP HTTP client library",
-            "homepage": "http://guzzlephp.org/",
             "keywords": [
                 "client",
                 "curl",
@@ -316,6 +356,10 @@
                 "rest",
                 "web service"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/guzzle/issues",
+                "source": "https://github.com/guzzle/guzzle/tree/7.5.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -326,28 +370,24 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/alexeyshockov",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/gmponos",
-                    "type": "github"
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/guzzle",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2021-03-23T11:33:13+00:00"
+            "time": "2022-08-28T15:39:27+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.4.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d"
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/8e7d04f1f6450fef59366c399cfad4b9383aa30d",
-                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/b94b2807d85443f9719887892882d0329d1e2598",
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598",
                 "shasum": ""
             },
             "require": {
@@ -359,16 +399,16 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -376,29 +416,62 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
             "description": "Guzzle promises library",
             "keywords": [
                 "promise"
             ],
-            "time": "2021-03-07T09:25:29+00:00"
+            "support": {
+                "issues": "https://github.com/guzzle/promises/issues",
+                "source": "https://github.com/guzzle/promises/tree/1.5.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/promises",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-08-28T14:55:35+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.0.0",
+            "version": "2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "1dc8d9cba3897165e16d12bb13d813afb1eb3fe7"
+                "reference": "67c26b443f348a51926030c83481b85718457d3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/1dc8d9cba3897165e16d12bb13d813afb1eb3fe7",
-                "reference": "1dc8d9cba3897165e16d12bb13d813afb1eb3fe7",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/67c26b443f348a51926030c83481b85718457d3d",
+                "reference": "67c26b443f348a51926030c83481b85718457d3d",
                 "shasum": ""
             },
             "require": {
@@ -412,17 +485,21 @@
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
+                "bamarni/composer-bin-plugin": "^1.8.1",
                 "http-interop/http-factory-tests": "^0.9",
-                "phpunit/phpunit": "^8.5.8 || ^9.3.10"
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                },
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -436,12 +513,33 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
                     "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 },
                 {
@@ -461,20 +559,38 @@
                 "uri",
                 "url"
             ],
-            "time": "2021-06-30T20:03:07+00:00"
+            "support": {
+                "issues": "https://github.com/guzzle/psr7/issues",
+                "source": "https://github.com/guzzle/psr7/tree/2.4.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-10-26T14:07:24+00:00"
         },
         {
             "name": "hiqdev/omnipay-robokassa",
-            "version": "3.2.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiqdev/omnipay-robokassa.git",
-                "reference": "2e510ffe2b321de1cf3b8bddde2abfd699d7d921"
+                "reference": "ebfd062d192c4020180d2bc617ee20c9ed2f49a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiqdev/omnipay-robokassa/zipball/2e510ffe2b321de1cf3b8bddde2abfd699d7d921",
-                "reference": "2e510ffe2b321de1cf3b8bddde2abfd699d7d921",
+                "url": "https://api.github.com/repos/hiqdev/omnipay-robokassa/zipball/ebfd062d192c4020180d2bc617ee20c9ed2f49a4",
+                "reference": "ebfd062d192c4020180d2bc617ee20c9ed2f49a4",
                 "shasum": ""
             },
             "require": {
@@ -530,7 +646,14 @@
                 "php",
                 "robokassa"
             ],
-            "time": "2020-02-09T21:35:48+00:00"
+            "support": {
+                "email": "support@hiqdev.com",
+                "forum": "http://forum.hiqdev.com/",
+                "issues": "https://github.com/hiqdev/omnipay-robokassa/issues",
+                "source": "https://github.com/hiqdev/omnipay-robokassa",
+                "wiki": "https://github.com/hiqdev/omnipay-robokassa/wiki"
+            },
+            "time": "2022-05-25T08:47:58+00:00"
         },
         {
             "name": "league/omnipay",
@@ -583,6 +706,10 @@
                 "omnipay",
                 "payment"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay/issues",
+                "source": "https://github.com/thephpleague/omnipay/tree/v3.2.1"
+            },
             "funding": [
                 {
                     "url": "https://github.com/barryvdh",
@@ -593,16 +720,16 @@
         },
         {
             "name": "moneyphp/money",
-            "version": "v3.3.1",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moneyphp/money.git",
-                "reference": "122664c2621a95180a13c1ac81fea1d2ef20781e"
+                "reference": "0dc40e3791c67e8793e3aa13fead8cf4661ec9cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moneyphp/money/zipball/122664c2621a95180a13c1ac81fea1d2ef20781e",
-                "reference": "122664c2621a95180a13c1ac81fea1d2ef20781e",
+                "url": "https://api.github.com/repos/moneyphp/money/zipball/0dc40e3791c67e8793e3aa13fead8cf4661ec9cd",
+                "reference": "0dc40e3791c67e8793e3aa13fead8cf4661ec9cd",
                 "shasum": ""
             },
             "require": {
@@ -671,7 +798,11 @@
                 "money",
                 "vo"
             ],
-            "time": "2020-03-18T17:49:59+00:00"
+            "support": {
+                "issues": "https://github.com/moneyphp/money/issues",
+                "source": "https://github.com/moneyphp/money/tree/v3.3.3"
+            },
+            "time": "2022-09-21T07:43:36+00:00"
         },
         {
             "name": "mono/omnipay-payu-latam",
@@ -693,6 +824,7 @@
             "require-dev": {
                 "omnipay/tests": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -781,6 +913,10 @@
                 "pay",
                 "payment"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-authorizenet/issues",
+                "source": "https://github.com/thephpleague/omnipay-authorizenet/tree/master"
+            },
             "time": "2019-04-27T22:33:23+00:00"
         },
         {
@@ -804,6 +940,7 @@
                 "omnipay/tests": "~3.0",
                 "squizlabs/php_codesniffer": "^2.8.1"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -867,6 +1004,7 @@
             "require-dev": {
                 "omnipay/tests": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -909,25 +1047,25 @@
         },
         {
             "name": "omnipay/common",
-            "version": "v3.1.2",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-common.git",
-                "reference": "5b16387ec5ab1b9ff86bdf0f20415088693b9948"
+                "reference": "e278ff00676c05cd0f4aaaf6189a226f26ae056e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-common/zipball/5b16387ec5ab1b9ff86bdf0f20415088693b9948",
-                "reference": "5b16387ec5ab1b9ff86bdf0f20415088693b9948",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-common/zipball/e278ff00676c05cd0f4aaaf6189a226f26ae056e",
+                "reference": "e278ff00676c05cd0f4aaaf6189a226f26ae056e",
                 "shasum": ""
             },
             "require": {
-                "moneyphp/money": "^3.1",
+                "moneyphp/money": "^3.1|^4.0.3",
                 "php": "^7.2|^8",
                 "php-http/client-implementation": "^1",
                 "php-http/discovery": "^1.14",
                 "php-http/message": "^1.5",
-                "symfony/http-foundation": "^2.1|^3|^4|^5"
+                "symfony/http-foundation": "^2.1|^3|^4|^5|^6"
             },
             "require-dev": {
                 "omnipay/tests": "^4.1",
@@ -987,13 +1125,17 @@
                 "payment",
                 "purchase"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-common/issues",
+                "source": "https://github.com/thephpleague/omnipay-common/tree/v3.2.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/barryvdh",
                     "type": "github"
                 }
             ],
-            "time": "2021-06-05T11:36:12+00:00"
+            "time": "2021-12-30T11:32:00+00:00"
         },
         {
             "name": "omnipay/eway",
@@ -1052,6 +1194,10 @@
                 "pay",
                 "payment"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-eway/issues",
+                "source": "https://github.com/thephpleague/omnipay-eway/tree/master"
+            },
             "time": "2019-02-06T08:16:41+00:00"
         },
         {
@@ -1075,6 +1221,7 @@
             "require-dev": {
                 "omnipay/tests": "~3.1"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1135,6 +1282,7 @@
             "require-dev": {
                 "omnipay/tests": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1197,6 +1345,7 @@
                 "phpro/grumphp": "^0.14",
                 "squizlabs/php_codesniffer": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1239,16 +1388,16 @@
         },
         {
             "name": "omnipay/mollie",
-            "version": "v5.4.1",
+            "version": "v5.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-mollie.git",
-                "reference": "d7ecd09aa6ff13cd31a114c2a57f4666a188c912"
+                "reference": "e9231442b67315017ec14ae3b0e13ff619276fd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-mollie/zipball/d7ecd09aa6ff13cd31a114c2a57f4666a188c912",
-                "reference": "d7ecd09aa6ff13cd31a114c2a57f4666a188c912",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-mollie/zipball/e9231442b67315017ec14ae3b0e13ff619276fd8",
+                "reference": "e9231442b67315017ec14ae3b0e13ff619276fd8",
                 "shasum": ""
             },
             "require": {
@@ -1262,7 +1411,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.4.x-dev"
+                    "dev-master": "5.5.x-dev"
                 }
             },
             "autoload": {
@@ -1298,13 +1447,17 @@
                 "pay",
                 "payment"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-mollie/issues",
+                "source": "https://github.com/thephpleague/omnipay-mollie/tree/v5.5.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/barryvdh",
                     "type": "github"
                 }
             ],
-            "time": "2021-06-05T09:43:32+00:00"
+            "time": "2022-06-28T18:26:20+00:00"
         },
         {
             "name": "omnipay/multisafepay",
@@ -1363,6 +1516,10 @@
                 "pay",
                 "payment"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-multisafepay/issues",
+                "source": "https://github.com/thephpleague/omnipay-multisafepay/tree/v3.0.0"
+            },
             "time": "2018-05-25T11:57:25+00:00"
         },
         {
@@ -1386,6 +1543,7 @@
                 "omnipay/tests": "~3.0",
                 "squizlabs/php_codesniffer": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1421,6 +1579,10 @@
                 "pay",
                 "payment"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-netaxept/issues",
+                "source": "https://github.com/thephpleague/omnipay-netaxept/tree/master"
+            },
             "time": "2019-02-11T10:33:17+00:00"
         },
         {
@@ -1443,6 +1605,7 @@
             "require-dev": {
                 "omnipay/tests": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1503,6 +1666,7 @@
                 "omnipay/tests": "^3.1",
                 "squizlabs/php_codesniffer": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1598,6 +1762,10 @@
                 "payflow",
                 "payment"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-payflow/issues",
+                "source": "https://github.com/thephpleague/omnipay-payflow/tree/master"
+            },
             "time": "2018-06-15T07:29:33+00:00"
         },
         {
@@ -1662,6 +1830,10 @@
                 "pxpay",
                 "pxpost"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-paymentexpress/issues",
+                "source": "https://github.com/thephpleague/omnipay-paymentexpress/tree/master"
+            },
             "time": "2020-06-30T20:58:37+00:00"
         },
         {
@@ -1722,6 +1894,10 @@
                 "paypal",
                 "purchase"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-paypal/issues",
+                "source": "https://github.com/thephpleague/omnipay-paypal/tree/v3.0.2"
+            },
             "time": "2018-05-15T10:35:58+00:00"
         },
         {
@@ -1745,6 +1921,7 @@
                 "omnipay/tests": "~3.0",
                 "squizlabs/php_codesniffer": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1780,6 +1957,10 @@
                 "payment",
                 "pin"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-pin/issues",
+                "source": "https://github.com/thephpleague/omnipay-pin/tree/master"
+            },
             "time": "2020-02-27T12:13:36+00:00"
         },
         {
@@ -1845,6 +2026,10 @@
                 "sage pay",
                 "sagepay"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-sagepay/issues",
+                "source": "https://github.com/thephpleague/omnipay-sagepay/tree/3.2.3"
+            },
             "time": "2019-08-19T15:18:37+00:00"
         },
         {
@@ -1904,20 +2089,24 @@
                 "payment",
                 "securepay"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-securepay/issues",
+                "source": "https://github.com/thephpleague/omnipay-securepay/tree/master"
+            },
             "time": "2018-05-26T05:31:25+00:00"
         },
         {
             "name": "omnipay/stripe",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-stripe.git",
-                "reference": "37df2a791e8feab45543125f4c5f22d5d305096d"
+                "reference": "20812498efedc1079baae5fea96567fefd669105"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-stripe/zipball/37df2a791e8feab45543125f4c5f22d5d305096d",
-                "reference": "37df2a791e8feab45543125f4c5f22d5d305096d",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-stripe/zipball/20812498efedc1079baae5fea96567fefd669105",
+                "reference": "20812498efedc1079baae5fea96567fefd669105",
                 "shasum": ""
             },
             "require": {
@@ -1931,7 +2120,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -1963,7 +2152,11 @@
                 "payment",
                 "stripe"
             ],
-            "time": "2019-08-31T10:55:06+00:00"
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-stripe/issues",
+                "source": "https://github.com/thephpleague/omnipay-stripe/tree/v3.2.0"
+            },
+            "time": "2022-03-22T10:58:41+00:00"
         },
         {
             "name": "omnipay/targetpay",
@@ -1985,6 +2178,7 @@
             "require-dev": {
                 "omnipay/tests": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2030,12 +2224,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomdonation/omnipay-worldpay.git",
-                "reference": "9acc5acb9d8647cdc1b90f0991fbbe53b055c264"
+                "reference": "03b3bad31ec333aa8f5ad313608a918511fe1530"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomdonation/omnipay-worldpay/zipball/9acc5acb9d8647cdc1b90f0991fbbe53b055c264",
-                "reference": "9acc5acb9d8647cdc1b90f0991fbbe53b055c264",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-worldpay/zipball/03b3bad31ec333aa8f5ad313608a918511fe1530",
+                "reference": "03b3bad31ec333aa8f5ad313608a918511fe1530",
                 "shasum": ""
             },
             "require": {
@@ -2045,6 +2239,7 @@
                 "omnipay/tests": "~3.0",
                 "squizlabs/php_codesniffer": "~3.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2082,20 +2277,20 @@
             "support": {
                 "source": "https://github.com/joomdonation/omnipay-worldpay/tree/master"
             },
-            "time": "2021-09-19T11:47:01+00:00"
+            "time": "2022-12-31T15:00:23+00:00"
         },
         {
             "name": "php-http/discovery",
-            "version": "1.14.1",
+            "version": "1.14.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "de90ab2b41d7d61609f504e031339776bc8c7223"
+                "reference": "31d8ee46d0215108df16a8527c7438e96a4d7735"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/de90ab2b41d7d61609f504e031339776bc8c7223",
-                "reference": "de90ab2b41d7d61609f504e031339776bc8c7223",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/31d8ee46d0215108df16a8527c7438e96a4d7735",
+                "reference": "31d8ee46d0215108df16a8527c7438e96a4d7735",
                 "shasum": ""
             },
             "require": {
@@ -2108,8 +2303,7 @@
                 "graham-campbell/phpspec-skip-example-extension": "^5.0",
                 "php-http/httplug": "^1.0 || ^2.0",
                 "php-http/message-factory": "^1.0",
-                "phpspec/phpspec": "^5.1 || ^6.1",
-                "puli/composer-plugin": "1.0.0-beta10"
+                "phpspec/phpspec": "^5.1 || ^6.1"
             },
             "suggest": {
                 "php-http/message": "Allow to use Guzzle, Diactoros or Slim Framework factories"
@@ -2146,7 +2340,11 @@
                 "message",
                 "psr7"
             ],
-            "time": "2021-09-18T07:57:46+00:00"
+            "support": {
+                "issues": "https://github.com/php-http/discovery/issues",
+                "source": "https://github.com/php-http/discovery/tree/1.14.3"
+            },
+            "time": "2022-07-11T14:04:40+00:00"
         },
         {
             "name": "php-http/guzzle7-adapter",
@@ -2204,20 +2402,24 @@
                 "Guzzle",
                 "http"
             ],
+            "support": {
+                "issues": "https://github.com/php-http/guzzle7-adapter/issues",
+                "source": "https://github.com/php-http/guzzle7-adapter/tree/1.0.0"
+            },
             "time": "2021-03-09T07:35:15+00:00"
         },
         {
             "name": "php-http/httplug",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/httplug.git",
-                "reference": "191a0a1b41ed026b717421931f8d3bd2514ffbf9"
+                "reference": "f640739f80dfa1152533976e3c112477f69274eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/httplug/zipball/191a0a1b41ed026b717421931f8d3bd2514ffbf9",
-                "reference": "191a0a1b41ed026b717421931f8d3bd2514ffbf9",
+                "url": "https://api.github.com/repos/php-http/httplug/zipball/f640739f80dfa1152533976e3c112477f69274eb",
+                "reference": "f640739f80dfa1152533976e3c112477f69274eb",
                 "shasum": ""
             },
             "require": {
@@ -2262,20 +2464,24 @@
                 "client",
                 "http"
             ],
-            "time": "2020-07-13T15:43:23+00:00"
+            "support": {
+                "issues": "https://github.com/php-http/httplug/issues",
+                "source": "https://github.com/php-http/httplug/tree/2.3.0"
+            },
+            "time": "2022-02-21T09:52:22+00:00"
         },
         {
             "name": "php-http/message",
-            "version": "1.12.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message.git",
-                "reference": "39eb7548be982a81085fe5a6e2a44268cd586291"
+                "reference": "7886e647a30a966a1a8d1dad1845b71ca8678361"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message/zipball/39eb7548be982a81085fe5a6e2a44268cd586291",
-                "reference": "39eb7548be982a81085fe5a6e2a44268cd586291",
+                "url": "https://api.github.com/repos/php-http/message/zipball/7886e647a30a966a1a8d1dad1845b71ca8678361",
+                "reference": "7886e647a30a966a1a8d1dad1845b71ca8678361",
                 "shasum": ""
             },
             "require": {
@@ -2292,7 +2498,7 @@
                 "ext-zlib": "*",
                 "guzzlehttp/psr7": "^1.0",
                 "laminas/laminas-diactoros": "^2.0",
-                "phpspec/phpspec": "^5.1 || ^6.3",
+                "phpspec/phpspec": "^5.1 || ^6.3 || ^7.1",
                 "slim/slim": "^3.0"
             },
             "suggest": {
@@ -2308,12 +2514,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Http\\Message\\": "src/"
-                },
                 "files": [
                     "src/filters.php"
-                ]
+                ],
+                "psr-4": {
+                    "Http\\Message\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2332,7 +2538,11 @@
                 "message",
                 "psr-7"
             ],
-            "time": "2021-08-29T09:13:12+00:00"
+            "support": {
+                "issues": "https://github.com/php-http/message/issues",
+                "source": "https://github.com/php-http/message/tree/1.13.0"
+            },
+            "time": "2022-02-11T13:41:14+00:00"
         },
         {
             "name": "php-http/message-factory",
@@ -2382,6 +2592,10 @@
                 "stream",
                 "uri"
             ],
+            "support": {
+                "issues": "https://github.com/php-http/message-factory/issues",
+                "source": "https://github.com/php-http/message-factory/tree/master"
+            },
             "time": "2015-12-19T14:08:53+00:00"
         },
         {
@@ -2435,6 +2649,10 @@
             "keywords": [
                 "promise"
             ],
+            "support": {
+                "issues": "https://github.com/php-http/promise/issues",
+                "source": "https://github.com/php-http/promise/tree/1.1.0"
+            },
             "time": "2020-07-07T09:29:14+00:00"
         },
         {
@@ -2484,6 +2702,9 @@
                 "psr",
                 "psr-18"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-client/tree/master"
+            },
             "time": "2020-06-29T06:28:15+00:00"
         },
         {
@@ -2536,6 +2757,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-factory/tree/master"
+            },
             "time": "2019-04-30T12:38:16+00:00"
         },
         {
@@ -2586,6 +2810,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
@@ -2626,6 +2853,10 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
+            },
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
@@ -2670,20 +2901,25 @@
                 "hash_equals",
                 "security"
             ],
+            "support": {
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/sarciszewski/php-future/issues",
+                "source": "https://github.com/sarciszewski/php-future"
+            },
             "time": "2015-09-28T20:04:00+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.6.0",
+            "version": "3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
+                "reference": "1359e176e9307e906dc3d890bcc9603ff6d90619"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/1359e176e9307e906dc3d890bcc9603ff6d90619",
+                "reference": "1359e176e9307e906dc3d890bcc9603ff6d90619",
                 "shasum": ""
             },
             "require": {
@@ -2721,7 +2957,12 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2021-04-09T00:54:41+00:00"
+            "support": {
+                "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
+                "source": "https://github.com/squizlabs/PHP_CodeSniffer",
+                "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
+            },
+            "time": "2022-06-18T07:21:10+00:00"
         },
         {
             "name": "swisnl/omnipay-redsys",
@@ -2729,12 +2970,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomdonation/omnipay-redsys.git",
-                "reference": "12b755576c656c2e3d1cc4cb2ebee9a0ab5640ec"
+                "reference": "c5f0cd617b428ef1a49b0db191d66c3c17b0f894"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomdonation/omnipay-redsys/zipball/12b755576c656c2e3d1cc4cb2ebee9a0ab5640ec",
-                "reference": "12b755576c656c2e3d1cc4cb2ebee9a0ab5640ec",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-redsys/zipball/c5f0cd617b428ef1a49b0db191d66c3c17b0f894",
+                "reference": "c5f0cd617b428ef1a49b0db191d66c3c17b0f894",
                 "shasum": ""
             },
             "require": {
@@ -2744,6 +2985,7 @@
             "require-dev": {
                 "omnipay/tests": "~3.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -2776,20 +3018,20 @@
             "support": {
                 "source": "https://github.com/joomdonation/omnipay-redsys/tree/master"
             },
-            "time": "2021-09-19T11:24:30+00:00"
+            "time": "2021-09-22T09:59:35+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v2.4.0",
+            "version": "v2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "5f38c8804a9e97d23e0c8d63341088cd8a22d627"
+                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/5f38c8804a9e97d23e0c8d63341088cd8a22d627",
-                "reference": "5f38c8804a9e97d23e0c8d63341088cd8a22d627",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
+                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
                 "shasum": ""
             },
             "require": {
@@ -2798,7 +3040,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.4-dev"
+                    "dev-main": "2.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -2826,6 +3068,9 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.2"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2840,33 +3085,36 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-23T23:28:01+00:00"
+            "time": "2022-01-02T09:53:40+00:00"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v5.3.7",
+            "version": "v5.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "e36c8e5502b4f3f0190c675f1c1f1248a64f04e5"
+                "reference": "b64a0e2df212d5849e4584cabff0cf09c5d6866a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/e36c8e5502b4f3f0190c675f1c1f1248a64f04e5",
-                "reference": "e36c8e5502b4f3f0190c675f1c1f1248a64f04e5",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b64a0e2df212d5849e4584cabff0cf09c5d6866a",
+                "reference": "b64a0e2df212d5849e4584cabff0cf09c5d6866a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
-                "symfony/deprecation-contracts": "^2.1",
+                "symfony/deprecation-contracts": "^2.1|^3",
                 "symfony/polyfill-mbstring": "~1.1",
                 "symfony/polyfill-php80": "^1.16"
             },
             "require-dev": {
                 "predis/predis": "~1.0",
-                "symfony/cache": "^4.4|^5.0",
-                "symfony/expression-language": "^4.4|^5.0",
-                "symfony/mime": "^4.4|^5.0"
+                "symfony/cache": "^4.4|^5.0|^6.0",
+                "symfony/dependency-injection": "^5.4|^6.0",
+                "symfony/expression-language": "^4.4|^5.0|^6.0",
+                "symfony/http-kernel": "^5.4.12|^6.0.12|^6.1.4",
+                "symfony/mime": "^4.4|^5.0|^6.0",
+                "symfony/rate-limiter": "^5.2|^6.0"
             },
             "suggest": {
                 "symfony/mime": "To use the file extension guesser"
@@ -2896,6 +3144,9 @@
             ],
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/http-foundation/tree/v5.4.17"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2910,24 +3161,27 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-27T11:20:35+00:00"
+            "time": "2022-12-14T08:23:03+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.23.1",
+            "version": "v1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6"
+                "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9174a3d80210dca8daa7f31fec659150bbeabfc6",
-                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
+                "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
+            },
+            "provide": {
+                "ext-mbstring": "*"
             },
             "suggest": {
                 "ext-mbstring": "For best performance"
@@ -2935,7 +3189,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.27-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -2943,12 +3197,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2973,6 +3227,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.27.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2987,20 +3244,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T12:26:48+00:00"
+            "time": "2022-11-03T14:55:06+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.23.1",
+            "version": "v1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be"
+                "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/1100343ed1a92e3a38f9ae122fc0eb21602547be",
-                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
+                "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
                 "shasum": ""
             },
             "require": {
@@ -3009,7 +3266,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.27-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -3017,12 +3274,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -3053,6 +3310,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.27.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3067,7 +3327,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-28T13:41:28+00:00"
+            "time": "2022-11-03T14:55:06+00:00"
         },
         {
             "name": "th3third/omnipay-payflow-extended",
@@ -3090,6 +3350,7 @@
             "require-dev": {
                 "omnipay/tests": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -3137,6 +3398,7 @@
             "require": {
                 "omnipay/common": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -3178,6 +3440,7 @@
             "require-dev": {
                 "omnipay/tests": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -3215,12 +3478,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomdonation/omnipay-bluepay.git",
-                "reference": "e3eef7c09c5d8baf5a93dd7b4b36582ff012d592"
+                "reference": "0f85823ba17974242aeb3d4415fcc566d757d3ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomdonation/omnipay-bluepay/zipball/e3eef7c09c5d8baf5a93dd7b4b36582ff012d592",
-                "reference": "e3eef7c09c5d8baf5a93dd7b4b36582ff012d592",
+                "url": "https://api.github.com/repos/joomdonation/omnipay-bluepay/zipball/0f85823ba17974242aeb3d4415fcc566d757d3ab",
+                "reference": "0f85823ba17974242aeb3d4415fcc566d757d3ab",
                 "shasum": ""
             },
             "require": {
@@ -3229,6 +3492,7 @@
             "require-dev": {
                 "omnipay/tests": "^3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3266,7 +3530,7 @@
             "support": {
                 "source": "https://github.com/joomdonation/omnipay-bluepay/tree/master"
             },
-            "time": "2021-09-19T11:31:49+00:00"
+            "time": "2022-12-31T15:23:44+00:00"
         }
     ],
     "packages-dev": [],
@@ -3298,5 +3562,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.3.0"
 }

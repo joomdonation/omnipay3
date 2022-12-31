@@ -6,6 +6,8 @@ use Omnipay\BluePay\Message\AuthRequest;
 use Omnipay\BluePay\Message\CaptureRequest;
 use Omnipay\BluePay\Message\RefundRequest;
 use Omnipay\BluePay\Message\SaleRequest;
+use Omnipay\BluePay\Message\CreateCardRequest;
+use Omnipay\BluePay\Message\CreateCardPurchaseRequest;
 use Omnipay\Common\AbstractGateway;
 
 /**
@@ -13,21 +15,27 @@ use Omnipay\Common\AbstractGateway;
  */
 class Gateway extends AbstractGateway
 {
+    // Override createRequests to pass on the testMode value
+    protected function createRequest($class, array $parameters)
+    {
+        $parameters['testMode'] = $this->getParameter('testMode');
+        return parent::createRequest($class, $parameters);
+    }
+
     public function getName()
     {
         return 'BluePay';
     }
 
-
     public function getDefaultParameters()
     {
-        return array(
-            'accountId' => '',
-            'secretKey' => '',
-            'developerMode'     => false,
-        );
+        return [
+            'accountId'     => '',
+            'secretKey'     => '',
+            'developerMode' => false,
+            'testMode'      => 0,
+        ];
     }
-
 
     public function getAccountId()
     {
@@ -150,5 +158,20 @@ class Gateway extends AbstractGateway
     public function purchase(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\BluePay\Message\SaleRequest', $parameters);
+    }
+
+
+    public function achPurchase(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\BluePay\Message\AchSaleRequest', $parameters);
+    }
+
+    public function createCard(array $parameters = array())
+    {
+        if (isset($parameters['action']) && $parameters['action'] == 'Purchase') {
+            return $this->createRequest('\Omnipay\BluePay\Message\CreateCardPurchaseRequest', $parameters);
+        } else {
+            return $this->createRequest('\Omnipay\BluePay\Message\CreateCardRequest', $parameters);
+        }
     }
 }
