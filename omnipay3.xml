@@ -9,7 +9,7 @@
 	<authorUrl>https://joomdonation.com</authorUrl>
 	<copyright>(C) 2021 Ossolution Team</copyright>
 	<license>GNU GPLv2 or later</license>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<files>
 		<folder>vendor</folder>		
 	</files>
