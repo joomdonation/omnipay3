@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="library" version="3.0" method="upgrade">
-	<name>Omnipay 3</name>
+	<name>Omnipay3</name>
 	<libraryname>omnipay3</libraryname>
 	<description>Omnipay 3 - a framework agnostic, multi-gateway payment processing library for Joom Donation's extensions.</description>
 	<creationDate>18-09-2021</creationDate>
