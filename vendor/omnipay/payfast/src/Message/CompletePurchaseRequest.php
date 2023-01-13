@@ -45,7 +45,7 @@ class CompletePurchaseRequest extends PurchaseRequest
         } else {
             // validate ITN
             $url = $this->getEndpoint().'/query/validate';
-            $httpResponse = $this->httpClient->request('post', $url, [], http_build_query($data));
+            $httpResponse = $this->httpClient->request('post', $url, ['Content-Type' => 'application/x-www-form-urlencoded; charset=utf-8'], http_build_query($data));
             $status = $httpResponse->getBody()->getContents();
             return $this->response = new CompletePurchaseItnResponse($this, $data, $status);
         }
