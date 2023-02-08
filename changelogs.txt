@@ -1,3 +1,4 @@
 05-03: libraries/lib_omnipay3/vendor/omnipay/authorizenet/src/Message/AIMResponse.php modified to return Transaction ID string instead of json format
 11-01: Add missing methods for vendor/xown/omnipay-epay/src/Omnipay/Epay/Message/PurchaseRequest.php https://github.com/joomdonation/omnipay3/commit/909582327948b8609644b5d4c4d91eb69cfc9b15
 13-01: Modify vendor/omnipay/payfast/src/Message/CompletePurchaseRequest.php, add Content-Type header
+08-02: Modify vendor/zburke/omnipay-bluepay/src/Message/AbstractRequest.php, add $data = array_merge($data, $this->tps($data)); to add TAMPER_PROOF_SEAL to the request
