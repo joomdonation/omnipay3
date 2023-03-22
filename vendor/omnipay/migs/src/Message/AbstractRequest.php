@@ -92,7 +92,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         
         if ($this->action != 'refund') {
             $data['vpc_Locale']      = $this->getLocaleCode() != null ? $this->getLocaleCode() : 'en';
-            $data['vpc_OrderInfo']   = $this->getDescription();
+            $data['vpc_OrderInfo']   = substr($this->getDescription(), 0, 34);
             $data['vpc_ReturnURL']   = $this->getReturnUrl();
         }
 

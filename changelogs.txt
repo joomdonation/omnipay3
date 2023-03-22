@@ -3,3 +3,4 @@
 13-01: Modify vendor/omnipay/payfast/src/Message/CompletePurchaseRequest.php, add Content-Type header
 08-02: Modify vendor/zburke/omnipay-bluepay/src/Message/AbstractRequest.php, add $data = array_merge($data, $this->tps($data)); to add TAMPER_PROOF_SEAL to the request
 15-02: Modify vendor/symfony/http-foundation/Request.php to prevent file upload error from extensions support file upload
+22-03: Modify vendor/omnipay/migs/src/Message/AbstractRequest.php, limit vpc_OrderInfo to 34 characters, $data['vpc_OrderInfo']   = substr($this->getDescription(), 0, 34);
